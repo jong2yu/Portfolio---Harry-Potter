@@ -1,0 +1,57 @@
+@import url(//db.onlinewebfonts.com/c/758d40d7ca52e3a9bff2655c7ab5703c?family=Cambria);
+@import url(//db.onlinewebfonts.com/c/12c13307742d4e286b692cce7ec65307?family=Californian+FB);
+@import url(//db.onlinewebfonts.com/c/01661f50354ecd0a3560ac450ecf43d3?family=Bell+MT);
+@import url(//db.onlinewebfonts.com/c/58862b5f5172c3609c9b0ced6da89b12?family=Calisto+MT);
+
+* {
+  margin:0; padding:0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+@mixin gc {
+  display:grid;
+  place-content: center;
+}
+@mixin fc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin ja {
+  display: flex;
+  justify-content: space-around;
+}
+@mixin aa {
+  display: flex;
+  align-content: space-around;
+}
+@mixin title {
+  color:#EFD564;
+}
+@mixin paX {
+  position: absolute;
+  left:50%; transform: translateX(-50%);
+}
+@mixin hover {
+  box-shadow: 0 0 60px black;
+  transform: scale(1.043);
+}
+
+$rotate: -10deg; $rotateY: 30deg; $x: -10px;
+@mixin poster($rotate: -10deg, $rotateY: 30deg, $x: -10px) {
+  width:25rem;
+  border-radius: 15px;
+  transform: perspective(400px) rotate($rotate) rotateY($rotateY);
+  box-shadow: $x 10px 20px black;
+}
+
+$font: 'Cambria Math'; $style: none; $color: white;
+@mixin text($font: 'Cambria Math', $style: none, $color: white) {
+  font: {
+    family: $font, sans-serif;
+    style: $style;
+    size: 2rem;
+  }
+  color: $color;
+}
